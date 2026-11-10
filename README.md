@@ -8,19 +8,19 @@ A modern, responsive, high-converting landing page for Inception Technology soft
 
 ```text
 abd/
-├── index.html          # Main HTML structure with all sections & modals
-├── favicon.svg         # Modern branded SVG tab icon
 ├── server.js           # Lightweight local Node.js HTTP server
+├── vercel.json         # Vercel deployment configuration (routes to /client)
 ├── README.md           # Documentation & instructions
 │
-├── css/
-│   └── style.css       # Clean White/Gray theme, #A068FD gradients, responsive layout & animations
-│
-├── js/
-│   └── script.js       # Sliders, particles, filters, accordion, modals, toast & WhatsApp integration
-│
-└── images/
-    └── slider-web.svg  # High-res vector illustration for hero slider
+└── client/             # Frontend assets folder
+    ├── index.html      # Main HTML structure with all sections & modals
+    ├── favicon.svg     # Modern branded SVG tab icon
+    ├── css/
+    │   └── style.css   # Clean White/Gray theme, #A068FD gradients, responsive layout & animations
+    ├── js/
+    │   └── script.js   # Sliders, particles, filters, accordion, modals, toast & WhatsApp integration
+    └── images/
+        └── slider-web.svg # High-res vector illustration for hero slider
 ```
 
 ---
