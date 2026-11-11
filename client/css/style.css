@@ -358,18 +358,18 @@ ul {
   background: var(--bg-gray-alt);
 }
 
-/* ========== HERO SECTION ========== */
+/* ========== HERO SECTION (SIZED MATCHING CODEENTER) ========== */
 .hero {
   position: relative;
   width: 100%;
-  min-height: 580px;
-  height: clamp(600px, calc(100vh - 72px), 720px);
-  max-height: 720px;
+  min-height: clamp(520px, 36.9375vw, 610px);
+  height: clamp(540px, 37vw, 610px);
+  max-height: 610px;
   overflow: hidden;
   background: #F8FAFC;
 }
 
-/* Full-width background split across viewport on desktop & ultra-wide */
+/* Full-width background split: exactly 50% left for images/slider, 50% right for dark tech copy */
 .hero-bg-split {
   position: absolute;
   inset: 0;
@@ -402,7 +402,7 @@ ul {
   pointer-events: none;
 }
 
-/* Centered container: locks width, alignment and proportions with header */
+/* Centered container: exactly half side for images (50%), half side for text (50%) */
 .hero-inner {
   position: relative;
   z-index: 2;
@@ -412,27 +412,27 @@ ul {
   padding: 0 24px;
   height: 100%;
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 32px;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
   align-items: center;
 }
 
-/* LEFT SIDE: SLIDER & MEDIA */
+/* LEFT HALF (50%): SLIDER & IMAGES */
 .hero-slider {
   position: relative;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 /* Dedicated stage that binds mockups and floating chips together */
 .hero-slider-stage {
   position: relative;
   width: 100%;
-  max-width: 480px;
-  height: 480px;
+  max-width: 450px;
+  height: 430px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -475,12 +475,12 @@ ul {
 
 .hslide-inner {
   width: 100%;
-  max-width: 460px;
+  max-width: 440px;
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 26px 28px;
+  border-radius: 18px;
+  padding: 22px 24px;
   border: 1px solid var(--line);
-  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.08);
   position: relative;
   z-index: 2;
   transition: transform .4s ease;
@@ -492,29 +492,29 @@ ul {
 
 .hslide-tag {
   display: inline-block;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--v2);
   background: rgba(160, 104, 253, 0.1);
-  padding: 4px 12px;
+  padding: 3px 10px;
   border-radius: 999px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   border: 1px solid rgba(160, 104, 253, 0.2);
 }
 
 .hslide-inner h4 {
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 800;
   color: var(--dark);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   letter-spacing: -0.3px;
 }
 
 .hslide-inner p {
-  font-size: 14.5px;
+  font-size: 13.5px;
   color: var(--muted);
-  margin-bottom: 22px;
-  line-height: 1.5;
+  margin-bottom: 14px;
+  line-height: 1.45;
 }
 
 /* Slide 1: SaaS Browser Mockup */
@@ -774,18 +774,18 @@ ul {
   box-shadow: 0 0 10px #A068FD;
 }
 
-.chip.c1 { top: 8px; left: -14px; }
-.chip.c2 { bottom: 54px; left: -18px; animation-delay: 1.2s; }
-.chip.c3 { bottom: 44px; right: -18px; animation-delay: 2.4s; }
+.chip.c1 { top: 6px; left: -10px; }
+.chip.c2 { bottom: 48px; left: -14px; animation-delay: 1.2s; }
+.chip.c3 { bottom: 38px; right: -14px; animation-delay: 2.4s; }
 
-/* RIGHT SIDE: DARK TECH HERO COPY */
+/* RIGHT HALF (50%): DARK TECH HERO COPY */
 .hero-copy {
   position: relative;
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 24px 0 24px clamp(16px, 3vw, 40px);
+  padding: 18px 0 18px clamp(16px, 2.5vw, 36px);
   height: 100%;
   z-index: 2;
 }
@@ -812,13 +812,15 @@ ul {
   color: #D8CEF8;
   border: 1px solid rgba(160, 104, 253, 0.45);
   box-shadow: 0 4px 15px rgba(160, 104, 253, 0.2);
+  font-size: 12px;
+  padding: 5px 14px;
 }
 
 .hero-copy h1 {
-  font-size: clamp(34px, 3.6vw, 54px);
+  font-size: clamp(30px, 3.2vw, 46px);
   font-weight: 800;
   line-height: 1.15;
-  margin: 18px 0 14px;
+  margin: 14px 0 10px;
   color: #FFFFFF;
   letter-spacing: -0.6px;
   animation-delay: .35s;
@@ -833,18 +835,23 @@ ul {
 
 .hero-copy p {
   color: #CFC4F5;
-  max-width: 500px;
-  font-size: 16px;
-  line-height: 1.65;
+  max-width: 480px;
+  font-size: 15px;
+  line-height: 1.6;
   animation-delay: .5s;
 }
 
 .hero-btns {
   display: flex;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-top: 24px;
+  margin-top: 18px;
   animation-delay: .65s;
+}
+
+.hero-copy .btn {
+  padding: 12px 24px;
+  font-size: 14px;
 }
 
 .hero-copy .btn-line {
@@ -866,22 +873,22 @@ ul {
 .hero-social-proof {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-top: 22px;
+  gap: 12px;
+  margin-top: 16px;
   animation-delay: .75s;
 }
 
 .hero-copy .stats {
   display: flex;
   gap: 0;
-  margin-top: 28px;
-  padding-top: 20px;
+  margin-top: 20px;
+  padding-top: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   animation-delay: .85s;
 }
 
 .hero-copy .stats div {
-  padding: 0 24px;
+  padding: 0 20px;
   border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -892,15 +899,15 @@ ul {
 
 .hero-copy .stats b {
   display: block;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 800;
   line-height: 1.1;
   color: #FFFFFF;
 }
 
 .hero-copy .stats div > span {
-  font-size: 11px;
-  letter-spacing: 1.5px;
+  font-size: 10.5px;
+  letter-spacing: 1.3px;
   color: #C9B8FF;
   text-transform: uppercase;
   font-weight: 700;
