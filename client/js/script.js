@@ -5,25 +5,36 @@
 /* ========== 0. PAGE PRELOADER WITH BIG OFFICIAL LOGO ========== */
 const preloader = document.getElementById('preloader');
 if (preloader) {
+  const startTime = Date.now();
+  const minDisplayTime = 1800; // 1.8 seconds so the big logo & animation are clearly visible
+
   const hidePreloader = () => {
     if (!preloader.classList.contains('hide')) {
-      preloader.classList.add('hide');
+      const elapsedTime = Date.now() - startTime;
+      const remainingTime = Math.max(0, minDisplayTime - elapsedTime);
+
       setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 700);
+        preloader.classList.add('hide');
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 750);
+      }, remainingTime);
     }
   };
 
   if (document.readyState === 'complete') {
-    setTimeout(hidePreloader, 600);
+    hidePreloader();
   } else {
-    window.addEventListener('load', () => setTimeout(hidePreloader, 600));
-    // Fallback: dismiss after 2.2s max so user never waits unnecessarily
-    setTimeout(hidePreloader, 2200);
+    window.addEventListener('load', hidePreloader);
+    // Fallback: dismiss after 3.2s max so user is never blocked
+    setTimeout(hidePreloader, 3200);
   }
 
-  // Allow clicking anywhere to dismiss instantly
-  preloader.addEventListener('click', hidePreloader);
+  // Allow clicking anywhere to dismiss instantly if user prefers
+  preloader.addEventListener('click', () => {
+    preloader.classList.add('hide');
+    setTimeout(() => { preloader.style.display = 'none'; }, 500);
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
