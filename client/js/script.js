@@ -2,6 +2,30 @@
    INCEPTION TECHNOLOGY - JAVASCRIPT
    ========================================================= */
 
+/* ========== 0. PAGE PRELOADER WITH BIG OFFICIAL LOGO ========== */
+const preloader = document.getElementById('preloader');
+if (preloader) {
+  const hidePreloader = () => {
+    if (!preloader.classList.contains('hide')) {
+      preloader.classList.add('hide');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 700);
+    }
+  };
+
+  if (document.readyState === 'complete') {
+    setTimeout(hidePreloader, 600);
+  } else {
+    window.addEventListener('load', () => setTimeout(hidePreloader, 600));
+    // Fallback: dismiss after 2.2s max so user never waits unnecessarily
+    setTimeout(hidePreloader, 2200);
+  }
+
+  // Allow clicking anywhere to dismiss instantly
+  preloader.addEventListener('click', hidePreloader);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ========== 1. HEADER MOBILE MENU ========== */
