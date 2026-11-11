@@ -375,21 +375,21 @@ ul {
 .hero {
   position: relative;
   width: 100%;
-  min-height: clamp(520px, 36.9375vw, 610px);
-  height: clamp(540px, 37vw, 610px);
+  height: clamp(430px, 31.59vw, 610px);
+  min-height: 430px;
   max-height: 610px;
   overflow: hidden;
-  background: #F8FAFC;
+  background: #0B1228;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-/* LEFT HALF (50%): WHITE AREA OCCUPIED BY BANNER IMAGE (Edge to Jamani Divider) */
+/* LEFT HALF (50%): BANNER IMAGE (Full Edge-to-Edge: Zero Top/Bottom/Side Gaps) */
 .hero-slider-side {
   position: relative;
   height: 100%;
   width: 100%;
-  background: linear-gradient(180deg, #F8FAFC 0%, #EEF2F6 100%);
+  background: #0B1228;
   border-right: 1px solid var(--line);
   display: flex;
   align-items: center;
@@ -465,14 +465,14 @@ ul {
   transform: translateY(0);
 }
 
-/* Slide 1: Full-Bleed Landscape Banner Image (Zero Crop, Fills Entire Left White Area) */
+/* Slide 1: Full-Bleed Landscape Banner Image (Zero Gaps, Fills Entire Left Area) */
 .hslide-banner-frame {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #F8FAFC;
+  background: #0B1228;
   overflow: hidden;
   position: relative;
   z-index: 2;
@@ -485,7 +485,8 @@ ul {
 .hslide-banner-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -782,7 +783,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 24px clamp(20px, 4vw, 56px);
+  padding: 16px clamp(18px, 3.5vw, 48px);
   max-width: 620px;
   width: 100%;
   height: 100%;
@@ -811,15 +812,15 @@ ul {
   color: #D8CEF8;
   border: 1px solid rgba(160, 104, 253, 0.45);
   box-shadow: 0 4px 15px rgba(160, 104, 253, 0.2);
-  font-size: 12px;
-  padding: 5px 14px;
+  font-size: 11.5px;
+  padding: 4px 12px;
 }
 
 .hero-copy h1 {
-  font-size: clamp(30px, 3.2vw, 46px);
+  font-size: clamp(26px, 2.7vw, 42px);
   font-weight: 800;
   line-height: 1.15;
-  margin: 14px 0 10px;
+  margin: 10px 0 8px;
   color: #FFFFFF;
   letter-spacing: -0.6px;
   animation-delay: .35s;
@@ -835,8 +836,8 @@ ul {
 .hero-copy p {
   color: #CFC4F5;
   max-width: 480px;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 14.5px;
+  line-height: 1.55;
   animation-delay: .5s;
 }
 
@@ -844,13 +845,13 @@ ul {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 18px;
+  margin-top: 14px;
   animation-delay: .65s;
 }
 
 .hero-copy .btn {
-  padding: 12px 24px;
-  font-size: 14px;
+  padding: 10px 22px;
+  font-size: 13.5px;
 }
 
 .hero-copy .btn-line {
@@ -873,15 +874,15 @@ ul {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 16px;
+  margin-top: 12px;
   animation-delay: .75s;
 }
 
 .hero-copy .stats {
   display: flex;
   gap: 0;
-  margin-top: 20px;
-  padding-top: 16px;
+  margin-top: 14px;
+  padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   animation-delay: .85s;
 }
