@@ -54,7 +54,7 @@ html {
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--ink);
-  background: var(--bg-white);
+  background: #b4b4b4;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -916,7 +916,7 @@ ul {
 /* ========== TECHNOLOGIES WE WORK WITH (TICKER / SLIDER) ========== */
 .tech-strip {
   padding: 38px 0 42px;
-  background: #FFFFFF;
+  background: #b4b4b4;
   border-bottom: 1px solid var(--line);
   position: relative;
   overflow: hidden;
@@ -1036,10 +1036,10 @@ ul {
   font-weight: 800;
 }
 
-/* ========== SERVICES (PURE CLEAN WHITE) ========== */
+/* ========== SERVICES ========== */
 .services {
   padding: 110px 0;
-  background: var(--bg-white);
+  background: #b4b4b4;
   position: relative;
 }
 
@@ -1211,7 +1211,7 @@ ul {
 /* ========== PROCESS SECTION (HOW WE WORK) ========== */
 .process {
   padding: 110px 0;
-  background: var(--bg-light);
+  background: #b4b4b4;
   position: relative;
 }
 
@@ -1414,7 +1414,7 @@ ul {
 /* ========== SOLUTIONS FLOW (CONNECTED HEXAGONS WITH #A068FD HOVER) ========== */
 .solutions-flow {
   padding: 100px 0 110px;
-  background: #FFFFFF;
+  background: #b4b4b4;
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
@@ -1811,10 +1811,10 @@ ul {
   color: #475569;
 }
 
-/* ========== PORTFOLIO (PURE CLEAN WHITE) ========== */
+/* ========== PORTFOLIO ========== */
 .portfolio {
   padding: 110px 0;
-  background: var(--bg-white);
+  background: #b4b4b4;
 }
 
 .tabs {
@@ -2091,11 +2091,11 @@ ul {
   box-shadow: 0 12px 28px -6px rgba(122, 108, 250, 0.5);
 }
 
-/* ========== TESTIMONIALS (LIGHT GRAY BACKGROUND) ========== */
+/* ========== TESTIMONIALS ========== */
 .testi {
   position: relative;
   padding: 110px 0;
-  background: var(--bg-light);
+  background: #b4b4b4;
   overflow: hidden;
 }
 
@@ -2345,10 +2345,10 @@ ul {
   text-shadow: 0 4px 16px rgba(255, 255, 255, 0.5);
 }
 
-/* ========== FAQ (PURE CLEAN WHITE) ========== */
+/* ========== FAQ ========== */
 .faq {
   padding: 110px 0;
-  background: var(--bg-white);
+  background: #b4b4b4;
 }
 
 .faq .wrap {
@@ -2462,7 +2462,7 @@ ul {
 /* ========== CALL TO ACTION (CTA BANNER) ========== */
 .ctasec {
   padding: 20px 0 110px;
-  background: var(--bg-white);
+  background: #b4b4b4;
 }
 
 .cta-box {
@@ -2546,7 +2546,7 @@ ul {
 
 /* ========== FOOTER (CODEENTER-INSPIRED HIGH-TECH ARCHITECTURE) ========== */
 .foot-outer-wrapper {
-  background: #FFFFFF;
+  background: #b4b4b4;
   padding: 0 24px 28px;
   position: relative;
   z-index: 10;
