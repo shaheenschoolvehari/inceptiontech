@@ -86,22 +86,15 @@
 
   <!-- ========== HERO ========== -->
   <section class="hero" id="home">
-    <!-- Full-Width Background Split for Ultra-Wide Monitors & Browser Zoom-Out -->
-    <div class="hero-bg-split" aria-hidden="true">
-      <div class="hb-slider-side"></div>
-      <div class="hb-copy-side"></div>
-    </div>
-
-    <!-- Centered Content Container: Locks Width & Height in Perfect Proportion -->
-    <div class="hero-inner wrap">
-      <!-- LEFT SIDE: INTERACTIVE IMAGE & MEDIA SLIDER -->
+    <!-- LEFT HALF (50%): BANNER & MEDIA SLIDER (All white area before jamani color) -->
+    <div class="hero-slider-side">
       <div class="hero-slider" id="heroSlider">
         <div class="hero-slider-stage">
           <div class="hero-slides" id="heroSlides">
-            <!-- Slide 1: AI Solutions Banner (Official Graphic - No Crop) -->
+            <!-- Slide 1: AI Solutions Banner (Official Landscape Graphic - No Crop) -->
             <div class="hslide active">
               <div class="hslide-banner-frame">
-                <img src="images/hero-ai-banner.jpg" alt="AI Solutions for the FUTURE - Inception Technology" class="hslide-banner-img" width="1024" height="1024">
+                <img src="images/hero-ai-banner.jpg" alt="AI Solutions for the FUTURE - Inception Technology" class="hslide-banner-img" width="1024" height="647">
               </div>
             </div>
 
@@ -159,7 +152,7 @@
           </div>
         </div>
 
-        <!-- Slider Navigation Controls (Positioned cleanly below stage) -->
+        <!-- Slider Navigation Controls (Subtly positioned at bottom) -->
         <div class="hslider-nav">
           <button class="hs-btn" id="heroPrev" aria-label="Previous Slide">&#10094;</button>
           <div class="hs-dots" id="heroDots">
@@ -170,12 +163,14 @@
           <button class="hs-btn" id="heroNext" aria-label="Next Slide">&#10095;</button>
         </div>
       </div>
+    </div>
 
-      <!-- RIGHT SIDE: DARK TECH HERO COPY (COLOR, PARTICLES & ANIMATION) -->
+    <!-- RIGHT HALF (50%): JAMANI / PURPLE TECH HERO COPY -->
+    <div class="hero-copy-side">
+      <!-- Interactive Animated Canvas -->
+      <canvas id="heroCanvas"></canvas>
+
       <div class="hero-copy">
-        <!-- Interactive Animated Canvas -->
-        <canvas id="heroCanvas"></canvas>
-
         <span class="pill">&#9679; Software House You Can Trust</span>
         <h1>Where Ideas Become <span class="grad-text">Digital Reality</span></h1>
         <p>We design and build websites, mobile apps, AI-powered solutions and custom software that help your business grow faster.</p>
