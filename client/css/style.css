@@ -371,12 +371,12 @@ ul {
   background: var(--bg-gray-alt);
 }
 
-/* ========== HERO SECTION (50/50 SPLIT: BANNER IMAGE & JAMANI COPY) ========== */
+/* ========== HERO SECTION (50/50 SPLIT: SIZED MATCHING CODEENTER) ========== */
 .hero {
   position: relative;
   width: 100%;
-  height: clamp(430px, 31.59vw, 610px);
-  min-height: 430px;
+  min-height: clamp(520px, 36.9375vw, 610px);
+  height: clamp(540px, 37vw, 610px);
   max-height: 610px;
   overflow: hidden;
   background: #0B1228;
@@ -783,7 +783,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 16px clamp(18px, 3.5vw, 48px);
+  padding: 24px clamp(20px, 4vw, 56px);
   max-width: 620px;
   width: 100%;
   height: 100%;
@@ -812,15 +812,15 @@ ul {
   color: #D8CEF8;
   border: 1px solid rgba(160, 104, 253, 0.45);
   box-shadow: 0 4px 15px rgba(160, 104, 253, 0.2);
-  font-size: 11.5px;
-  padding: 4px 12px;
+  font-size: 12px;
+  padding: 5px 14px;
 }
 
 .hero-copy h1 {
-  font-size: clamp(26px, 2.7vw, 42px);
+  font-size: clamp(30px, 3.2vw, 46px);
   font-weight: 800;
   line-height: 1.15;
-  margin: 10px 0 8px;
+  margin: 14px 0 10px;
   color: #FFFFFF;
   letter-spacing: -0.6px;
   animation-delay: .35s;
@@ -836,8 +836,8 @@ ul {
 .hero-copy p {
   color: #CFC4F5;
   max-width: 480px;
-  font-size: 14.5px;
-  line-height: 1.55;
+  font-size: 15px;
+  line-height: 1.6;
   animation-delay: .5s;
 }
 
@@ -845,13 +845,13 @@ ul {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 14px;
+  margin-top: 18px;
   animation-delay: .65s;
 }
 
 .hero-copy .btn {
-  padding: 10px 22px;
-  font-size: 13.5px;
+  padding: 12px 24px;
+  font-size: 14px;
 }
 
 .hero-copy .btn-line {
@@ -874,15 +874,15 @@ ul {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 12px;
+  margin-top: 16px;
   animation-delay: .75s;
 }
 
 .hero-copy .stats {
   display: flex;
   gap: 0;
-  margin-top: 14px;
-  padding-top: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   animation-delay: .85s;
 }
