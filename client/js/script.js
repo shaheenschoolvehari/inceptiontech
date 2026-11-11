@@ -414,6 +414,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!canvas.parentElement) return;
       width = canvas.width = canvas.parentElement.offsetWidth;
       height = canvas.height = canvas.parentElement.offsetHeight;
+      if (particles.length > 0 && width > 0 && height > 0) {
+        particles.forEach(p => {
+          if (p.x > width) p.x = Math.random() * width;
+          if (p.y > height) p.y = Math.random() * height;
+        });
+      }
     }
 
     resizeCanvas();
