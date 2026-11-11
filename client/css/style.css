@@ -434,18 +434,23 @@ ul {
 .hero-slider {
   position: relative;
   height: 100%;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 0;
+  padding: 12px 0 14px;
+  gap: 12px;
 }
 
-/* Dedicated stage that binds mockups and floating chips together */
+/* Dedicated stage: expands to fully occupy the left half (matches 6x6 inches / 1024x1024 ratio) */
 .hero-slider-stage {
   position: relative;
   width: 100%;
-  max-width: 450px;
-  height: 430px;
+  max-width: 530px;
+  height: 100%;
+  max-height: 530px;
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -464,12 +469,12 @@ ul {
   inset: 0;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .7s ease, transform .7s ease;
-  transform: scale(0.96);
+  transition: opacity .6s ease, transform .6s ease;
+  transform: scale(0.97);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 0;
 }
 
 .hslide.active {
@@ -488,10 +493,10 @@ ul {
 
 .hslide-inner {
   width: 100%;
-  max-width: 440px;
+  max-width: 490px;
   background: #FFFFFF;
-  border-radius: 18px;
-  padding: 22px 24px;
+  border-radius: 20px;
+  padding: 24px 26px;
   border: 1px solid var(--line);
   box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.08);
   position: relative;
@@ -503,20 +508,22 @@ ul {
   transform: translateY(0);
 }
 
-/* Slide 1: Full Aspect-Preserved Banner Image (Zero Crop) */
+/* Slide 1: Full Aspect-Preserved Banner Image (Zero Crop, Fills Entire Left Area) */
 .hslide-banner-frame {
   width: 100%;
-  max-width: 430px;
-  max-height: 430px;
+  height: 100%;
+  max-width: 530px;
+  max-height: 530px;
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #FFFFFF;
-  border-radius: 18px;
-  padding: 6px;
-  border: 1px solid var(--line);
-  box-shadow: 0 16px 40px -10px rgba(15, 23, 42, 0.12), 0 0 20px rgba(160, 104, 253, 0.15);
+  background: transparent;
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(160, 104, 253, 0.28);
+  box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.16), 0 0 35px rgba(160, 104, 253, 0.22);
   transition: transform .4s ease;
   position: relative;
   z-index: 2;
@@ -531,7 +538,7 @@ ul {
   height: 100%;
   object-fit: contain;
   display: block;
-  border-radius: 12px;
+  border-radius: 19px;
 }
 
 .hslide-tag {
@@ -731,22 +738,19 @@ ul {
   z-index: 1;
 }
 
-/* Slider Controls */
+/* Slider Controls (Cleanly positioned below stage with zero overlap) */
 .hslider-nav {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   display: flex;
   align-items: center;
   gap: 12px;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);
-  padding: 6px 14px;
+  padding: 5px 14px;
   border-radius: 999px;
   border: 1px solid var(--line);
-  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
 }
 
 .hs-btn {
@@ -790,37 +794,10 @@ ul {
   background: var(--grad);
 }
 
-/* Chips anchored tightly to the slide stage */
+/* Chips removed so banner images are 100% visible and uncluttered */
 .chip {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 16px;
-  border-radius: 999px;
-  background: rgba(10, 19, 49, 0.88);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(160, 104, 253, 0.45);
-  color: #fff;
-  font-size: 12.5px;
-  font-weight: 700;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  animation: floaty 5s ease-in-out infinite;
-  z-index: 12;
-  white-space: nowrap;
+  display: none !important;
 }
-
-.chip i {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #A068FD;
-  box-shadow: 0 0 10px #A068FD;
-}
-
-.chip.c1 { top: 6px; left: -10px; }
-.chip.c2 { bottom: 48px; left: -14px; animation-delay: 1.2s; }
-.chip.c3 { bottom: 38px; right: -14px; animation-delay: 2.4s; }
 
 /* RIGHT HALF (50%): DARK TECH HERO COPY */
 .hero-copy {
@@ -3421,19 +3398,17 @@ ul {
   }
   .hero-slider {
     order: 2;
-    min-height: 500px;
-    padding: 40px 16px;
+    min-height: auto;
+    padding: 30px 16px 40px;
     background: linear-gradient(180deg, #F8FAFC 0%, #EEF2F6 100%);
     border-top: 1px solid var(--line);
     border-right: 0;
   }
   .hero-slider-stage {
-    max-width: 440px;
-    height: 440px;
+    max-width: 480px;
+    height: 480px;
+    aspect-ratio: 1 / 1;
   }
-  .chip.c1 { top: 6px; left: 0; }
-  .chip.c2 { bottom: 54px; left: 0; }
-  .chip.c3 { bottom: 44px; right: 0; }
   .stats div {
     padding: 0 16px;
   }

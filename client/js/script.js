@@ -518,7 +518,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (heroSlides.length > 0) {
     let currentHeroIdx = 0;
-    let heroTimer;
 
     function goToHeroSlide(index) {
       currentHeroIdx = (index + heroSlides.length) % heroSlides.length;
@@ -530,35 +529,26 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    function startHeroTimer() {
-      clearInterval(heroTimer);
-      heroTimer = setInterval(() => {
-        goToHeroSlide(currentHeroIdx + 1);
-      }, 4500);
-    }
-
     if (heroNext) {
       heroNext.addEventListener('click', () => {
         goToHeroSlide(currentHeroIdx + 1);
-        startHeroTimer();
       });
     }
 
     if (heroPrev) {
       heroPrev.addEventListener('click', () => {
         goToHeroSlide(currentHeroIdx - 1);
-        startHeroTimer();
       });
     }
 
     heroDots.forEach((dot, idx) => {
       dot.addEventListener('click', () => {
         goToHeroSlide(idx);
-        startHeroTimer();
       });
     });
 
-    startHeroTimer();
+    // Keep Slide 1 (AI Solutions Official Banner) prominently visible
+    goToHeroSlide(0);
   }
 
   /* ========== 17. SCROLL PROGRESS BAR ========== */
