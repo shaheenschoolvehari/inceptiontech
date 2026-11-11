@@ -503,6 +503,37 @@ ul {
   transform: translateY(0);
 }
 
+/* Slide 1: Full Aspect-Preserved Banner Image (Zero Crop) */
+.hslide-banner-frame {
+  width: 100%;
+  max-width: 430px;
+  max-height: 430px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 40px -10px rgba(15, 23, 42, 0.12), 0 0 20px rgba(160, 104, 253, 0.15);
+  transition: transform .4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.hslide.active .hslide-banner-frame {
+  transform: translateY(0);
+}
+
+.hslide-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
+
 .hslide-tag {
   display: inline-block;
   font-size: 11px;
